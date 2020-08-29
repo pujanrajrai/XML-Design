@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="catalog_18030046.css"?>
+
+<car_store xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="catalog_18030046.xsd">
+	<!-- navigation bar -->
+	<nav>
+		<websitelogo>
+			<logo_slogan id="main_slogan">Pujan Car</logo_slogan>
+			<logo_sub_slogan id="sub_slogan">Bringing Best To U</logo_sub_slogan>
+		</websitelogo>
+		<navelelement>
+			<home active="true">Home</home>
+			<agent>Agent</agent>
+			<sales>Sales</sales>
+			<contact>Contact</contact>
+		</navelelement>
+	</nav>
+	<!-- background image slider -->
+	<backgroundImage>
+		<intro_slider id="image_slider">
+			<image id="image1">
+				<slogan1 id="slogan1">Buy Brand new cars in cheap price</slogan1>
+				<slogan2 id="slogan2" optional="true">only on pujans car store</slogan2>
+			</image>
+
+			<image id="image2">
+				<slogan1 id="slogan1">Sale Sale Sale</slogan1>
+				<slogan2 id="slogan2" optional="true">Upto 40% discount on used Car</slogan2>
+			</image>
+
+			<image id="image3">
+				<slogan1 id="slogan1">A car for everyone</slogan1>
+			</image>
+			<image id="image4">
+				<slogan1 id="slogan1">Designed for action</slogan1>
+			</image>
+		</intro_slider>
+	</backgroundImage>
+	<!-- car whole description -->
+	<cars>
+
+		<car name="Lamborghini">
+			<car_image id="carimg1"></car_image>
+			<carshortdetail>
+				<carName>Lamborghini Aventador</carName>
+				<price currency="in Rs">Rs.1,00,00,000</price>
+			</carshortdetail>
+			<carDesc>
+				<companany>Manufacturer: Volkswagen</companany>
+				<cartype sound="high">Engine Type: Petrol</cartype>
+				<color required="optional">Color: Red,Gray</color>
+				<model>Model:Laxuarary</model>
+				<seatCapacity required="optional">Seat Capacity: 2</seatCapacity>
+			</carDesc>
+		</car>
+
+		<car name="Lamborghini">
+			<car_image id="carimg2"></car_image>
+			<carshortdetail>
+				<carName>Lamborghini Gallardo</carName>
+				<price currency="in Rs">Rs.10,00,000</price>
+			</carshortdetail>
+			<carDesc>
+				<companany>Manufacurer: Volkswagen</companany>
+				<cartype sound="high">Engine Type: Petrol</cartype>
+				<discounts>Discount: 5%</discounts>
+				<model required="optional">Model:Racing</model>
+				<insurance required="optional">Insurance: Included</insurance>
+			</carDesc>
+		</car>
+
+		<car name="Mercedes">
+			<car_image id="carimg3"></car_image>
+			<carshortdetail>
+				<carName>Mercedes GLS</carName>
+				<price currency="inRs">Rs.1,00,00,000</price>
+			</carshortdetail>
+			<carDesc>
+				<companany>Manufacurer: Mercedes-Benz</companany>
+				<cartype sound="high">Engine Type: Petrol</cartype>
+				<quantity required="optional">Quantity: 5</quantity>
+				<model>Model:SUV</model>
+				<seatCapacity required="optional">Seat Capacity:4</seatCapacity>
+			</carDesc>
+		</car>
+
+		<car id="carmargin" name="Ferrari">
+			<car_image id="carimg4"></car_image>
+			<carshortdetail>
+				<carName>Rosso corsar</carName>
+				<price currency="inRs">Rs.2,00,00,000</price>
+			</carshortdetail>
+			<carDesc>
+				<companany>Manufacurer: Ferrari</companany>
+				<cartype sound="low">Engine Type: Etlectric</cartype>
+				<dimenson required="optional">Dimenson: 5x9x7 inches</dimenson>
+				<model>Model:Laxuarary</model>
+				<seatCapacity required="optional">Seat Capacity: 2</seatCapacity>
+			</carDesc>
+		</car>
+
+		<car id="carmargin" name="Audi">
+			<car_image id="carimg5"></car_image>
+			<carshortdetail>
+				<carName>Audi AS3 2020</carName>
+				<price currency="inRs">Rs.14,00,000</price>
+			</carshortdetail>
+			<carDesc>
+				<companany>Manufacurer: Audi</companany>
+				<cartype sound="mid">Engine Type: Hybrid</cartype>
+				<seatCapacity required="optional">Seat Capacity: 4</seatCapacity>
+				<model>Model:Sedan</model>
+				<category required="optional">Category: Used</category>
+			</carDesc>
+		</car>
+
+		<car id="carmargin" name="Kia">
+			<car_image id="carimg6"></car_image>
+			<carshortdetail>
+				<carName>Kia Seltos 2018</carName>
+				<price currency="inRs">Rs.20,00,000</price>
+			</carshortdetail>
+			<carDesc>
+				<companany>Manufacurer: Kia</companany>
+				<cartype sound="high">Engine Type: Petrol</cartype>
+				<model>Model: SUV</model>
+				<discounts required="optional">Discount: 20%</discounts>
+				<seatCapacity required="optional">Seat Capacity: 6</seatCapacity>
+			</carDesc>
+		</car>
+	</cars>
+	<!-- company details including address and phone number -->
+	<CompanyInfo>
+		<companyName>Pujan Company</companyName>
+		<shopMoto>Best Experience</shopMoto>
+		<companyLogo></companyLogo>
+		<shopDetails>
+			<shopName>PUJAN'S CAR</shopName>
+			<address id="fontContact">Address: Pepsicola</address>
+			<telephone id="fontContact">PhoneNo:9808384948</telephone>
+			<website id="fontContact">Visit us on: www.pujanrajrai.com</website>
+			<branch id="fontContact">
+				<branches id="fontContact" title="branches">Our Branches:</branches>
+				<branchaddress >Baneswor,Sanothimi,Sanepa,Biratnagar </branchaddress>
+			</branch>
+		</shopDetails>
+	</CompanyInfo>
+
+</car_store>

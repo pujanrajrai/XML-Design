@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<!-- navigation validation-->
+    <xs:element name="nav">
+	 	<xs:complexType>
+	      <xs:sequence>
+	        <xs:element ref="websitelogo"/>
+	        <xs:element ref="navelelement"/>
+	      </xs:sequence>
+	    </xs:complexType>
+	</xs:element>
+
+  <xs:element name="websitelogo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="logo_slogan"/>
+        <xs:element ref="logo_sub_slogan"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="logo_slogan">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="id"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="logo_sub_slogan">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="id"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="navelelement">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="home"/>
+        <xs:element ref="agent"/>
+        <xs:element ref="sales"/>
+        <xs:element ref="contact"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="home">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="active"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="agent" type="xs:string"/>
+  <xs:element name="sales" type="xs:string"/>
+  <xs:element name="contact" type="xs:string"/>
+
+  <!-- background image slider start -->
+
+  <xs:element name="backgroundImage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="intro_slider"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="intro_slider">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="image" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="id"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="image">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="slogan1"/>
+        <xs:element ref="slogan2" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="id" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="slogan1">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="id" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="slogan2">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="id" use="optional"/>
+          <xs:attribute type="xs:string" name="optional" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="cars">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="car" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+
+<xs:element name="car">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="car_image"/>
+        <xs:element ref="carshortdetail"/>
+        <xs:element ref="carDesc"/>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="name" use="optional"/>
+      <xs:attribute type="xs:string" name="id" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+
+ <xs:element name="car_image">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="id" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="carshortdetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="carName" type="xs:string"/>
+        <xs:element ref="price"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="price">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="currency" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+
+
+   <xs:element name="carDesc">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded" minOccurs="0">
+        <xs:element name="companany" type="xs:string"/>
+        <xs:element ref="cartype"/>
+        <xs:element ref="color"/>
+        <xs:element ref="discounts"/>
+        <xs:element ref="quantity"/>
+        <xs:element ref="dimenson"/>
+        <xs:element ref="model"/>
+        <xs:element ref="seatCapacity"/>
+        <xs:element ref="insurance"/>
+        <xs:element ref="category"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="cartype">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="sound" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="color">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="required"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="model">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="required" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="seatCapacity">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="required" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  
+  
+ 
+  <xs:element name="discounts">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="required" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="insurance">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="required"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="quantity">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="required"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="dimenson">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="required"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="category">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="required"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="CompanyInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="companyName" type="xs:string"/>
+		<xs:element name="shopMoto" type="xs:string"/>
+		<xs:element name="companyLogo" type="xs:string"/>
+        <xs:element ref="shopDetails"/>
+      </xs:sequence>
+    </xs:complexType>
+	</xs:element>
+	
+    <xs:element name="shopDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="shopName" type="xs:string"/>
+        <xs:element ref="address"/>
+        <xs:element ref="telephone"/>
+        <xs:element ref="website"/>
+        <xs:element ref="branch"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="address">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="id"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="telephone">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="id"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="website">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="id"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="branch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="branches"/>
+        <xs:element name="branchaddress" type="xs:string"/>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="id"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="branches">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="id"/>
+          <xs:attribute type="xs:string" name="title"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+  
+  
+  
+  
